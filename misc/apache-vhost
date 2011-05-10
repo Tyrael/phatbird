@@ -1,0 +1,28 @@
+<VirtualHost *:80>
+        ServerName phatbird.tyrael.hu
+	ServerAlias phatbird.dev
+	ServerAlias *.phatbird.dev
+
+        DocumentRoot /var/www/apache/vhosts/phatbird/web/
+        <Directory /var/www/apache/vhosts/phatbird/web/>
+                Options Indexes FollowSymLinks -MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+
+		Options -MultiViews
+
+		RewriteEngine On
+		RewriteBase /
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteRule ^(.*)$ index.php [QSA,L]
+
+        </Directory>
+
+	<Directory ~ "\.svn">
+		 Order allow,deny
+		Deny from all
+	</Directory>
+
+</VirtualHost>
+
