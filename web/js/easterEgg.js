@@ -20,7 +20,7 @@ jQuery(document).ready(function($) { // global scope ftw
 		'<h6>phat birds:</h6>' +
 			'<dl>' +
 				'<dt>The Evil Genius under da hood:</dt>' +
-				'<dd>Tyrael (Kovács Ferenc)</dd>' +
+				'<dd>Tyrael (Ferenc Kovács)</dd>' +
 				'<dt>Master of Surfaces:</dt>' +
 				'<dd>eFBé (Balázs Foky)</dd>' +
 			'</dl>' +
