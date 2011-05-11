@@ -1,12 +1,18 @@
-/* 
-    Document   : styles
-    Created on : Apr 20, 2011, 10:38:31 PM
-    Author     : eFBe
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-body {
-    background: red;
+/*
+ * styles.css
+ * 
+ * author: eFBe
+ * Copyright 2011, The Weird Syndicate
+ *
+ * global styles - TODO: rename
+ *
+ */
+ 
+p, dt, dd, li {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	color: #000;
 }
+
+
 

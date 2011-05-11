@@ -10,30 +10,32 @@
  */
 
 jQuery(document).ready(function($) { // global scope ftw
-	var body = $("body"),
-		duration = 500,
-
-		// let's say it's a dumb template, don't wanna fuck with createElement
-		devListTemplate = '<div id="devList">' +
-				'<h6>phat birds:</h6>' +
-				'<dl>' +
-					'<dt>The Evil Genius under da hood:</dt>' +
-					'<dd>Tyrael (Kovács Ferenc)</dd>' +
-					'<dt>Master of Surfaces:</dt>' +
-					'<dd>eFBé (Balázs Foky)</dd>' +
-				'</dl>' +
-				'<button id="HideAuthors">don\'t care</button>'
-			'</div>';
+	var options = {
+		body: $("body"),
+		duration: 500
+	}
+	
+	// let's say it's a dumb template, don't wanna fuck with createElement
+	var	devListTemplate = '<div id="devList">' +
+		'<h6>phat birds:</h6>' +
+			'<dl>' +
+				'<dt>The Evil Genius under da hood:</dt>' +
+				'<dd>Tyrael (Kovács Ferenc)</dd>' +
+				'<dt>Master of Surfaces:</dt>' +
+				'<dd>eFBé (Balázs Foky)</dd>' +
+			'</dl>' +
+			'<button id="HideAuthors">don\'t care</button>'
+		'</div>';
 
 	// methods in the jquery namespace look like this
 	$.showDevelopers = function () {
-		body.prepend(devListTemplate);
+		options.body.prepend(devListTemplate);
 		
 		var elem = $('#devList'),
 			hide = $('#HideAuthors');
 			
 		if (elem.length) { // only when it's already exist
-			elem.fadeIn(duration);
+			elem.fadeIn(options.duration);
 		}
 		
 		hide.bind('click', function() {
@@ -45,7 +47,7 @@ jQuery(document).ready(function($) { // global scope ftw
 		var elem = $('#devList');
 		
 		if (elem.css('display', 'block')) {
-			elem.fadeOut(duration, function() {
+			elem.fadeOut(options.duration, function() {
 				elem.remove();
 			});
 		}
