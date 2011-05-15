@@ -19,7 +19,7 @@
 
         </Directory>
 
-	<Directory ~ "\.svn">
+	<Directory ~ "\.git">
 		 Order allow,deny
 		Deny from all
 	</Directory>
